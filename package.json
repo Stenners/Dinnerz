@@ -1,14 +1,13 @@
 {
-  "name": "todo",
-  "version": "1.0.0",
+  "name": "dinnerz",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack && http-server public"
   },
-  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
-  "license": "ISC",
+  "author": "Stenners",
   "devDependencies": {
     "babel-core": "^5.8.38",
     "babel-loader": "^5.4.2",
