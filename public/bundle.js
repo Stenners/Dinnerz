@@ -61,10 +61,9 @@
 	var AddItem = __webpack_require__(181);
 
 	var base = Rebase.createClass({
-	  apiKey: "AIzaSyBm3py9af9BqQMfUMnMKpAXJUfxlsegnDI",
-	  authDomain: "qwales1-test.firebaseapp.com",
-	  databaseURL: "https://qwales1-test.firebaseio.com",
-	  storageBucket: "qwales1-test.appspot.com"
+	  apiKey: "AIzaSyA6nMjyQ3XC9KvJLI3VhWIeCu49635vLEU",
+	  authDomain: "dinnerz-f5ffa.firebaseapp.com",
+	  databaseURL: "https://dinnerz-f5ffa.firebaseio.com"
 	});
 	console.log('Please change to your own firebase address in app/App.js');
 
