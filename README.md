@@ -1,2 +1,4 @@
 # Dinnerz
-Dinnerz
+
+npm install
+nom start

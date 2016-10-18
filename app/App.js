@@ -12,19 +12,33 @@ class App extends React.Component {
         super(props);
         this.state = {
             list: [],
-            loading: true
+            loading: true,
+            weekData: 'week' + this.getWeekNumber(Date.now())[1]
         }
     }
 
     componentDidMount() {
-        this.ref = base.syncState('dinners', {
+
+        this.ref = base.syncState(this.state.weekData, {
             context: this,
             state: 'list',
             asArray: true,
+            queries: {
+              orderByChild: 'votes'
+            },
             then() {
                 this.setState({loading: false})
             }
         });
+    }
+
+    getWeekNumber(d) {
+        d = new Date(+d);
+        d.setHours(0,0,0);
+        d.setDate(d.getDate() + 4 - (d.getDay()||7));
+        var yearStart = new Date(d.getFullYear(),0,1);
+        var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
+        return [d.getFullYear(), weekNo];
     }
 
     componentWillUnmount() {
@@ -49,12 +63,9 @@ class App extends React.Component {
     }
 
     handleThumbsUp(index, votes) {
-        console.log('Thumbs up');
-        console.log(index);
-
-        base.update('dinners/' + index, {
+        base.update(this.state.weekData + '/' + index, {
             data: {
-                votes: votes+1
+                votes: votes-1
             },
             then(err) {
                 if (!err) {

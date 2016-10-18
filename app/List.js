@@ -48,7 +48,7 @@ class List extends React.Component {
                     <span style={styles.todoItem}>
                         {item.name}
                     </span>
-                    <span style={styles.votes}>+{item.votes}</span>
+                    <span style={styles.votes}>+{-item.votes}</span>
                     <button className="glyphicon glyphicon-thumbs-up" style={styles.thumbsUp} onClick={this.props.thumbsup.bind(null, index, item.votes)}/>
                 </li>
             )
