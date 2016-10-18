@@ -1,11 +1,11 @@
 {
-  "name": "dinnerz",
+  "name": "dinna",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && http-server public"
+    "start": "webpack-dev-server --progress --colors --port 8000 --inline"
   },
   "author": "Stenners",
   "devDependencies": {
